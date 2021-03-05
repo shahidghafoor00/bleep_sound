@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7BF9ADA25F260EF006910C4 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F7BF9AD925F260EE006910C4 /* beep.mp3 */; };
 		F7C9FD8A25F2487700DFC3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C9FD8925F2487700DFC3A3 /* AppDelegate.swift */; };
 		F7C9FD8C25F2487700DFC3A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C9FD8B25F2487700DFC3A3 /* SceneDelegate.swift */; };
 		F7C9FD8E25F2487700DFC3A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C9FD8D25F2487700DFC3A3 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7BF9AD925F260EE006910C4 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		F7C9FD8625F2487700DFC3A3 /* Bleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C9FD8925F2487700DFC3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C9FD8B25F2487700DFC3A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7BF9AD525F26028006910C4 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF9AD925F260EE006910C4 /* beep.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		F7C9FD7D25F2487700DFC3A3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		F7C9FD8825F2487700DFC3A3 /* Bleep */ = {
 			isa = PBXGroup;
 			children = (
+				F7BF9AD525F26028006910C4 /* Sound */,
 				F7C9FD8925F2487700DFC3A3 /* AppDelegate.swift */,
 				F7C9FD8B25F2487700DFC3A3 /* SceneDelegate.swift */,
 				F7C9FD8D25F2487700DFC3A3 /* ViewController.swift */,
@@ -126,6 +137,7 @@
 			files = (
 				F7C9FD9625F2487B00DFC3A3 /* LaunchScreen.storyboard in Resources */,
 				F7C9FD9325F2487B00DFC3A3 /* Assets.xcassets in Resources */,
+				F7BF9ADA25F260EF006910C4 /* beep.mp3 in Resources */,
 				F7C9FD9125F2487700DFC3A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
