@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3F77A67F6FC92F337D0AFDF /* Pods_Bleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F730C98099FEAC57710E978 /* Pods_Bleep.framework */; };
 		F7BF9ADA25F260EF006910C4 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F7BF9AD925F260EE006910C4 /* beep.mp3 */; };
 		F7C9FD8A25F2487700DFC3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C9FD8925F2487700DFC3A3 /* AppDelegate.swift */; };
 		F7C9FD8C25F2487700DFC3A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C9FD8B25F2487700DFC3A3 /* SceneDelegate.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21F8AD7A31516340744F6628 /* Pods-Bleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bleep.release.xcconfig"; path = "Target Support Files/Pods-Bleep/Pods-Bleep.release.xcconfig"; sourceTree = "<group>"; };
+		7F730C98099FEAC57710E978 /* Pods_Bleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0B2F1EC1FFEBA5DCB835CFF /* Pods-Bleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bleep.debug.xcconfig"; path = "Target Support Files/Pods-Bleep/Pods-Bleep.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BF9AD925F260EE006910C4 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		F7C9FD8625F2487700DFC3A3 /* Bleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C9FD8925F2487700DFC3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,12 +37,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F77A67F6FC92F337D0AFDF /* Pods_Bleep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2602D83515E7E67A4492333A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F730C98099FEAC57710E978 /* Pods_Bleep.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B81C80A86FC1D95A6FB98BBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0B2F1EC1FFEBA5DCB835CFF /* Pods-Bleep.debug.xcconfig */,
+				21F8AD7A31516340744F6628 /* Pods-Bleep.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F7BF9AD525F26028006910C4 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +75,8 @@
 			children = (
 				F7C9FD8825F2487700DFC3A3 /* Bleep */,
 				F7C9FD8725F2487700DFC3A3 /* Products */,
+				B81C80A86FC1D95A6FB98BBE /* Pods */,
+				2602D83515E7E67A4492333A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7C9FD9A25F2487B00DFC3A3 /* Build configuration list for PBXNativeTarget "Bleep" */;
 			buildPhases = (
+				D865E6FF7ECC5209C0457AE5 /* [CP] Check Pods Manifest.lock */,
 				F7C9FD8225F2487700DFC3A3 /* Sources */,
 				F7C9FD8325F2487700DFC3A3 /* Frameworks */,
 				F7C9FD8425F2487700DFC3A3 /* Resources */,
+				F61F8B74114DF1BC06DF9623 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D865E6FF7ECC5209C0457AE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bleep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F61F8B74114DF1BC06DF9623 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bleep/Pods-Bleep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bleep/Pods-Bleep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bleep/Pods-Bleep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7C9FD8225F2487700DFC3A3 /* Sources */ = {
@@ -295,6 +364,7 @@
 		};
 		F7C9FD9B25F2487B00DFC3A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B2F1EC1FFEBA5DCB835CFF /* Pods-Bleep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		F7C9FD9C25F2487B00DFC3A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21F8AD7A31516340744F6628 /* Pods-Bleep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,6 @@
+framework module Pods_Bleep {
+  umbrella header "Pods-Bleep-umbrella.h"
+
+  export *
+  module * { export * }
+}
