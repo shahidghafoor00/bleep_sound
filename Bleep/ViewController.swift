@@ -27,7 +27,12 @@ class ViewController: UIViewController {
 
     
     @IBAction func playBeep(_ sender: Any) {
-        audioPlayer?.play()
+        if ((audioPlayer?.isPlaying) != nil) {
+            print("playing...")
+            audioPlayer?.stop()
+        } else {
+            audioPlayer?.play()
+        }
     }
     
 }
