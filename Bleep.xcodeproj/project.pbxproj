@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,7 +58,6 @@
 				D0B2F1EC1FFEBA5DCB835CFF /* Pods-Bleep.debug.xcconfig */,
 				21F8AD7A31516340744F6628 /* Pods-Bleep.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
