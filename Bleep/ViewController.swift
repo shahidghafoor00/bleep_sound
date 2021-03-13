@@ -12,6 +12,7 @@ import GoogleMobileAds
 
 class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenContentDelegate {
 
+    @IBOutlet weak var bleepButton: UIButton!
     var audioPlayer: AVAudioPlayer?
     
     // ads...
@@ -33,7 +34,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
         // banner
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-6812853586050394/9299158331"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
@@ -41,7 +42,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
         
         // Interstitial
         let request = GADRequest()
-            GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910",
+            GADInterstitialAd.load(withAdUnitID:"ca-app-pub-6812853586050394/4238403341",
                                         request: request,
                               completionHandler: { [self] ad, error in
                                 if let error = error {
@@ -57,7 +58,14 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
     @IBAction func playBeep(_ sender: Any) {
         if audioPlayer?.isPlaying == true {
             audioPlayer?.stop()
+            bleepButton.setImage(UIImage(named: "normal.png"), for: .normal)
+            if interstitial != nil {
+                interstitial?.present(fromRootViewController: self)
+              } else {
+                print("Ad wasn't ready")
+              }
         } else {
+            bleepButton.setImage(UIImage(named: "active.png"), for: .normal)
             audioPlayer?.play()
         }
     }

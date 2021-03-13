@@ -21,7 +21,7 @@
                                     <constraint firstAttribute="height" constant="300" id="bEJ-Qe-FVr"/>
                                     <constraint firstAttribute="width" constant="300" id="lr1-1Z-Am7"/>
                                 </constraints>
-                                <state key="normal" title="Play Beep" image="button"/>
+                                <state key="normal" title="Play Beep" image="normal"/>
                                 <connections>
                                     <action selector="playBeep:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhy-z3-6nM"/>
                                 </connections>
@@ -34,6 +34,9 @@
                             <constraint firstItem="QP9-8a-X6u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kZx-1J-MWT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bleepButton" destination="QP9-8a-X6u" id="fPu-xT-fvu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="button" width="1400" height="1400"/>
+        <image name="normal" width="1400" height="1400"/>
     </resources>
 </document>
